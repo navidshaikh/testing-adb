@@ -1,5 +1,6 @@
 ADB + Eclipse with vagrant-adbinfo plugin
 
+- create your workspace `mkdir ~/adb-eclipse` && cd `~/adb-eclipse`
 - `vagrant plugin install vagrant-adbinfo`
 -  Export following into a `Vagrantfile`
 ```ruby
