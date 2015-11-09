@@ -5,6 +5,10 @@ Following are the steps to setup [ADB] (https://github.com/projectatomic/adb-ato
 
 Note: Following steps are tested on Windows 7.
 
+- Install vagrant -  Guide <http://www.vagrantup.com/downloads>
+
+- Install Virtual Box - Guide <https://www.virtualbox.org/wiki/Downloads>
+
 - Download the `pscp` from [here](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
   - Save pscp.exe somewhere on your hard drive. `C:\Windows\` is a good location in the default execution path.
 
