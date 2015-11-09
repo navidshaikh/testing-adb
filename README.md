@@ -1,5 +1,6 @@
 # testing-adb
-Step by step guide to test the adb with `provider x platform` matrix
+
+Steps to setup ADB and Eclipse Docker tooling on different platforms with different providers
 
 [1. [Mac OS X, Linux] + VirtualBox + ADB + vagrant-adbinfo plugin + Eclipse](linux_mac_virtualbox.md)
 
