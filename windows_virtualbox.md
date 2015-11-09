@@ -5,10 +5,10 @@ Following are the steps to setup [ADB] (https://github.com/projectatomic/adb-ato
 
 Note: Following steps are tested on Windows 7.
 
-To setup the 
-- Download the `pscp` utility, follow these [instructions](http://www.nber.org/pscp.html) - `pscp` utility is required by the vagrant-adbinfo plugin
+- Download the `pscp` from [here](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
+  - Save pscp.exe somewhere on your hard drive. `C:\Windows\` is a good location in the default execution path.
 
-- Install the vagrant-adbinfo plugin `vagrant plugin install vagrant-adbinfo` OR update using `vagrant plugin update vagrant-adbinfo`
+- Install the vagrant-adbinfo plugin `vagrant plugin install vagrant-adbinfo` OR update using `vagrant plugin update vagrant-adbinfo` accordingly.
 
 -  Export following into a `Vagrantfile`
 ```ruby
@@ -47,7 +47,7 @@ export DOCKER_TLS_VERIFY=1
 export DOCKER_MACHINE_NAME=8606567
 ```
 
-- Details about the vagrant box is displayed as part of the output
+- Connection details for the `docker` daemon inside ADB are displayed after executing the vagrant adbinfo plugin
 
 - To test the client connection to `docker` daemon inside ADB: In the Vagrantfile, we have mapped host port `2379` to `docker` daemon port (2376) inside ADB, which means that you can access the daemon at (host machine) 127.0.0.1:2379.
 
