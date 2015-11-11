@@ -88,37 +88,20 @@ end
 
 - Image should be pulled inside the box and show up under the `Images` icon. Right click on the image and select `Run Image..` option. Lets create a container from the image we just pulled, and verify that container gets created and check the output from the container.
 
-  ! [pulled image] (qe_screenshots/6.png)
+  ![pulled image] (qe_screenshots/6.png)
   
-  ! [container run view] (qe_screenshots/7.png)
+  ![container run view] (qe_screenshots/7.png)
   
-  ! [container run view] (qe_screenshots/8.png)
-  
+  ![container run view] (qe_screenshots/8.png)
 
+- Modify the the host port in Vagrantfile and reload the box `vagrant reload`, re-run the the plugin `vagrant adbinfo`, verify that modified host port is listed correctly in `DOCKER_HOST` variable.
 
-
-
-
-
-
-
-- Run plugin again from the command line (`vagrant adbinfo`) and 
-
-- Run `vagrant adbinfo` in your current working directory
-
-```
-$ vagrant adbinfo
-Set the following environment variables to enable access to the
-docker daemon running inside of the vagrant virtual machine:
-
-export DOCKER_HOST=tcp://127.0.0.1:2379
-export DOCKER_CERT_PATH=/home/nshaikh/vagrant/adb_1.4.0/.vagrant/machines/default/virtualbox/.docker/
-export DOCKER_TLS_VERIFY=1
-export DOCKER_MACHINE_NAME=8606567
+```ruby
+ config.vm.network "forwarded_port", guest: 2376, host: 5555, auto_correct: true
 ```
 
-- Connection details for the `docker` daemon inside ADB are displayed after executing the vagrant adbinfo plugin
+- SSH into the ADB vagrant box
+   - check if the images pulled via Eclipse exist
+   - pull any image inside the box `docker pull` and verify it appears in Eclipse under `Images` icon
 
-- To test the client connection to `docker` daemon inside ADB: In the Vagrantfile, we have mapped host port `2379` to `docker` daemon port (2376) inside ADB, which means that you can access the daemon at (host machine) 127.0.0.1:2379.
-
-- To test out the connection with Eclipse kindly check <https://www.eclipse.org/community/eclipse_newsletter/2015/june/article3.php> and this Video by Xavier Coulon <https://www.youtube.com/watch?v=RUgEgtLux8Q>. More Eclipse Docker Tooling documentations are at <<https://wiki.eclipse.org/Linux_Tools_Project/Docker_Tooling/User_Guide>>
+- Try manually removing the certs directory `.vagrant/machines/default/virtualbox/.docker/` and re-run the plugin, it should copy the certs again.
