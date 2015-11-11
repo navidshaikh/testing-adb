@@ -9,6 +9,8 @@ Note: Following steps are tested on Windows 7.
 
 - Install VirtualBox 5.0.8 - Guide <https://www.virtualbox.org/wiki/Downloads>
 
+- Download Eclipse <https://eclipse.org/downloads/> and install the Docker tooling plugin <http://www.eclipse.org/community/eclipse_newsletter/2015/june/article3.php>
+
 - Download the `pscp` from [here](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
   - Save pscp.exe somewhere on your hard drive. `C:\Windows\` is a good location in the default execution path.
 
