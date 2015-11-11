@@ -10,10 +10,6 @@ Setup environment for testing
 
 - Setup vagrant-adbinfo plugin and Eclipse on the given operating system - https://github.com/navidshaikh/testing-adb
 
-# vi: set ft=ruby :
-
-#Vagrant file for libvirt/kvm and virtualbox provider
-
 Test cases
 ----------
 
@@ -26,6 +22,9 @@ Test cases
   - Create a workspace directory and export following contents in a Vagrantfile
 
 ```
+# vi: set ft=ruby :
+#Vagrant file for libvirt/kvm and virtualbox provider
+
 Vagrant.configure(2) do |config|
   config.vm.box = "atomicapp/dev"
 
