@@ -64,31 +64,36 @@ end
 - Verify the integration with Eclipse: Now lets connect to Eclipse Docker plugin using the connection details displayed by the plugin
   - Verify that you have installed the Docker Tooling plugin in Eclipse, if not check [here] (<https://www.eclipse.org/community/eclipse_newsletter/2015/june/article3.php>)
   
-  [!alt text] (https://github.com/navidshaikh/testing-adb/tree/qe-instructions/qe_screenshots/1.png)
+  ![container run] (qe_screenshots/1.png)
 
   - Add the required Docker plugin related views in the Eclipse
   
-  [!alt text] (https://github.com/navidshaikh/testing-adb/tree/qe-instructions/qe_screenshots/2.png)
+  ![docker tooling views] (qe_screenshots/2.png)
 
   - After adding the views, go to Docker Explorer view and create new Docker connection
 
-  [!alt text] (https://github.com/navidshaikh/testing-adb/tree/qe-instructions/qe_screenshots/3.png)
+  ![new docker connection] (qe_screenshots/2_5.png)
 
   - Verify that `docker` daemon inside ADB box is not pingable without authentication
 
-  [!alt text] (https://github.com/navidshaikh/testing-adb/tree/qe-instructions/qe_screenshots/4.png)
+  ![failed ping] (qe_screenshots/3.png)
 
   - Enter the path to the certs as displayed by adbinfo output by `DOCKER_CERT_PATH` variable, hit `Test Connection`  and verify that ping successds. After ping succeeds, hit `Finish` button to create the connection `Docker Explorer` view.
 
-  [!alt text] (https://github.com/navidshaikh/testing-adb/tree/qe-instructions/qe_screenshots/5.png)
+  ![success ping] (qe_screenshots/4.png)
 
   - Once the `adb-eclipse` (names relative) connection is shown, exapand the view, right click on the `Images` icon and hit `Pull image` option, it will show up a view, enter the name of image you want to pull.
   
-  [!alt text] (https://github.com/navidshaikh/testing-adb/tree/qe-instructions/qe_screenshots/6.png)
+  ![image pull] (qe_screenshots/5.png)
 
 - Image should be pulled inside the box and show up under the `Images` icon. Right click on the image and select `Run Image..` option. Lets create a container from the image we just pulled, and verify that container gets created and check the output from the container.
 
-  [!alt text] (https://github.com/navidshaikh/testing-adb/tree/qe-instructions/qe_screenshots/9.png)
+  ! [pulled image] (qe_screenshots/6.png)
+  
+  ! [container run view] (qe_screenshots/7.png)
+  
+  ! [container run view] (qe_screenshots/8.png)
+  
 
 
 
