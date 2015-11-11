@@ -63,26 +63,37 @@ end
 
 - Verify the integration with Eclipse: Now lets connect to Eclipse Docker plugin using the connection details displayed by the plugin
   - Verify that you have installed the Docker Tooling plugin in Eclipse, if not check [here] (<https://www.eclipse.org/community/eclipse_newsletter/2015/june/article3.php>)
-    file:///home/nshaikh/Pictures/Screenshot%20from%202015-11-11%2014-56-51.png
+  
+  [!alt text] (qe_screenshots/1.png)
 
   - Add the required Docker plugin related views in the Eclipse
-  file:///home/nshaikh/Pictures/Screenshot%20from%202015-11-11%2014-58-49.png
+  
+  [!alt text] (qe_screenshots/2.png)
 
   - After adding the views, go to Docker Explorer view and create new Docker connection
-  file:///home/nshaikh/Pictures/Screenshot%20from%202015-11-11%2014-59-40.png
+
+  [!alt text] (qe_screenshots/3.png)
 
   - Verify that `docker` daemon inside ADB box is not pingable without authentication
-  file:///home/nshaikh/Pictures/Screenshot%20from%202015-11-11%2015-01-11.png
+
+  [!alt text] (qe_screenshots/4.png)
 
   - Enter the path to the certs as displayed by adbinfo output by `DOCKER_CERT_PATH` variable, hit `Test Connection`  and verify that ping successds. After ping succeeds, hit `Finish` button to create the connection `Docker Explorer` view.
-  file:///home/nshaikh/Pictures/Screenshot%20from%202015-11-11%2015-12-31.png
+
+  [!alt text] (qe_screenshots/5.png)
 
   - Once the `adb-eclipse` (names relative) connection is shown, exapand the view, right click on the `Images` icon and hit `Pull image` option, it will show up a view, enter the name of image you want to pull.
-  file:///home/nshaikh/Pictures/Screenshot%20from%202015-11-11%2015-17-07.png
+  
+  [!alt text] (qe_screenshots/6.png)
 
-- Image should be pulled inside the box and show up under the `Images` icon. Right click on the image and select `Run Image..` option. Lets create a container from the image we just pulled,
-- 
-file:///home/nshaikh/Pictures/Screenshot%20from%202015-11-11%2015-19-20.png
+- Image should be pulled inside the box and show up under the `Images` icon. Right click on the image and select `Run Image..` option. Lets create a container from the image we just pulled, and verify that container gets created and check the output from the container.
+
+  [!alt text] (qe_screenshots/9.png)
+
+
+
+
+
 
 
 
